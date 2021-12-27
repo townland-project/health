@@ -1,0 +1,15 @@
+@import "../node_modules/@townland-project/character-dom/src/component.scss";
+
+:root {
+    --animation-speed: 0.3s;
+    --background-color: #74b9ff;
+    --header-padding: 0 20px;
+    --items-padding: 10px 20px;
+    --item-opacity: 0.25;
+    --item-heigth: 36px;
+    --item-border-radius: 10px;
+}
+
+body {
+    margin: 0;
+}

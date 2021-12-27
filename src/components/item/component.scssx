@@ -1,0 +1,98 @@
+tl-item {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    width: 100%;
+    height: var(--item-heigth);
+
+    border: 2px solid var(--color);
+    border-radius: var(--item-border-radius);
+
+    position: relative;
+
+    overflow: hidden;
+
+    margin-bottom: 10px;
+
+    box-shadow: 0 4px rgba($color: #000000, $alpha: 0.2);
+
+    i {
+        position: absolute;
+
+        top: 50%;
+        left: 10px;
+
+        transform: translateY(-50%);
+    }
+
+    span.name {
+        position: absolute;
+
+        top: 50%;
+        left: 42px;
+
+        transform: translateY(-50%);
+    }
+
+    div.value {
+        position: absolute;
+
+        top: 50%;
+        right: 10px;
+
+        transform: translateY(-50%);
+
+        &::before {
+            content: var(--value);
+
+            display: block;
+
+            position: relative;
+        }
+    }
+
+    div.forground {
+        position: absolute;
+
+        inset: 0 0 0 0;
+
+        background-color: var(--color);
+
+        color: #fff;
+
+        clip-path: polygon(0 0, var(--percent) 0%, var(--percent) 100%, 0% 100%);
+
+        overflow: hidden;
+
+        transition: all var(--animation-speed);
+    }
+
+    div.background {
+        &::before {
+            content: "";
+
+            position: absolute;
+
+            inset: 0 0 0 0;
+
+            background-color: #fff;
+        }
+
+        &::after {
+            content: "";
+
+            position: absolute;
+
+            inset: 0 0 0 0;
+
+            background-color: var(--color);
+
+            opacity: var(--item-opacity);
+        }
+
+        div.value {
+            color: var(--color);
+        }
+    }
+}

@@ -1,0 +1,52 @@
+tl-header {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    padding: var(--header-padding);
+
+    div.title {
+        display: flex;
+        flex-direction: column;
+
+        strong {
+            font-size: 1.6em;
+            color: rgba($color: #000000, $alpha: 0.7);
+        }
+
+        span {
+            font-size: 1.1em;
+            color: rgba($color: #000000, $alpha: 0.6);
+        }
+    }
+
+    div.characters {
+        min-width: 120px;
+        height: 220px;
+
+        margin-top: 20px;
+        margin-left: auto;
+
+        position: relative;
+
+        tl-character {
+            width: 80px;
+            height: 160px;
+
+            display: block;
+
+            position: absolute;
+
+            &[index="1"] {
+                z-index: 1;
+            }
+
+            &[index="2"] {
+                right: 0;
+                top: 20px;
+
+                z-index: 2;
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+tl-main {
+    display: flex;
+    flex-direction: column;
+
+    width: 100vw;
+    height: 100vh;
+
+    font-family: "Source Sans 3", sans-serif;
+
+    overflow: hidden;
+
+    -webkit-tap-highlight-color: transparent;
+
+    background-color: var(--background-color);
+}

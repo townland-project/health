@@ -1,0 +1,10 @@
+<div class="background">
+    <i class="material-icons">{{item.icon}}</i>
+    <span class="name">{{item.name}}</span>
+    <div class="value"></div>
+</div>
+<div class="forground">
+    <i class="material-icons">{{item.icon}}</i>
+    <span class="name">{{item.name}}</span>
+    <div class="value"></div>
+</div>
